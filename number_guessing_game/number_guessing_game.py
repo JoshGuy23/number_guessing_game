@@ -19,12 +19,14 @@ def check_answer(guess, answer, lives):
             print("Too low.")
         print("Guess again.")
         lives -= 1
+        
     return lives
 
 # Get the user to choose a difficulty and give them the appropriate number of guesses.
 def set_difficulty():
     difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
     lives = 0
+    
     if difficulty == "easy":
         lives = 10
     elif difficulty == "hard":
@@ -33,11 +35,14 @@ def set_difficulty():
     
 def game():
     intro()
+    
     # Set the initial guess to 0, and randomly generate the number to guess.
     player_guess = 0
     target_number = random.randint(1,100)
+    
     # Get the user to choose a difficulty and give them the appropriate number of guesses.
     lives = set_difficulty()
+    
     # The game goes on until the player correctly guesses the number or runs out of lives.
     while player_guess != target_number and lives > 0:
         # Display the number of guesses remaining.
