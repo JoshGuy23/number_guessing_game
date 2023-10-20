@@ -13,7 +13,7 @@ lives = 0
 if difficulty == "easy":
     lives = 10
 elif difficulty == "hard":
-    lives - 5
+    lives = 5
     
 while player_guess != target_number and lives > 0:
     print(f"You have {lives} attempts remaining to guess the number.")
