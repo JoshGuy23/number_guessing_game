@@ -10,10 +10,10 @@ def intro():
 # If the player got the guess right, display a congratulatory message.
 # Otherwise, display the appropriate feedback and subtract a life from the player.
 def check_answer(guess, answer, lives):
-    if player_guess == target_number:
-        print(f"You got it! The answer was {target_number}.")
+    if guess == answer:
+        print(f"You got it! The answer was {answer}.")
     else:
-        if player_guess > target_number:
+        if guess > answer:
             print("Too high.")
         else:
             print("Too low.")
